@@ -1,7 +1,7 @@
 # Fashion-MNIST-PCA-vs-t-SNE-for-Dimensionality-Reduction-Clustering
 This project compares PCA and t-SNE on Fashion-MNIST (unsupervised). It shows how PCA explains variance and reduces dimensions, while t-SNE reveals clear nonlinear clusters. KMeans clustering on t-SNE demonstrates natural groupings of clothing types more effectively than PCA.
 
-##📖 Overview
+## 📖 Overview
 This project applies **dimensionality reduction** techniques to the [Fashion-MNIST dataset]  
 We compare **PCA (Principal Component Analysis)** and **t-SNE (t-Distributed Stochastic Neighbor Embedding)**, and then apply **KMeans clustering** to visualize how well the data groups in lower dimensions.
 
@@ -56,3 +56,6 @@ t-SNE shows meaningful clusters in 2D.
 - PCA (2D): overlapping blobs, hard to separate classes.  
 - t-SNE (2D): clear clusters emerge.  
 - KMeans on t-SNE: cluster assignments align well with natural categories.
+
+## Why KMeans with t-SNE?
+t-SNE gives us a 2D visualization where natural groupings of data points appear, but it does not assign cluster labels. By applying KMeans on the t-SNE results, we can automatically group similar points into clusters and compare how well these clusters align with the natural clothing categories. This highlights the power of unsupervised learning.
